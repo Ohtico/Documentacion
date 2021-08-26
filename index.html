@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Documentacion</title>
+</head>
+
+<body class="bg-dark">
+
+    <nav id="costabar">
+
+        <header><img src="https://blog.arsys.es/file/uploads/2020/04/01-vuejs.jpg" width="300px" alt=""></header>
+        <ul>
+            <li><a class="nav-link" href="#Introduccion">Introducción</a></li>
+            <li><a class="nav-link" href="#empecemos">Empecemos</a></li>
+            <li><a href="#representacion" class="nav-link">Representación declarativa</a></li>
+            <li><a href="#relacion" class="nav-link">Relación con elementos personalizados</a></li>
+            <li><a href="#instalacion" class="nav-link">Instalacion</a></li>
+            <li><a href="#Devtools" class="nav-link">Vue Devtools</a></li>
+            <li><a href="#Sintaxis" class="nav-link">Sintaxis de la plantilla</a></li>
+            <li><a href="#estilo" class="nav-link">Vinculaciones de clase y estilo</a></li>
+           
+        </ul>
+    </nav>
+
+    <main id="main-cont">
+        <section class="main-section" id="Introduccion">
+            <h1>Introducción</h1>
+            <article>
+                <h4>¿Qué es Vue.js?</h4>
+                <p class="m-2">Vue (pronunciado / vjuː /, como vista ) es un marco progresivo para construir interfaces
+                    de usuario. A diferencia de otros marcos monolíticos, Vue está diseñado desde cero para ser
+                    adoptable de forma incremental. La biblioteca principal se centra únicamente en la capa de vista y
+                    es fácil de recoger e integrar con otras bibliotecas o proyectos existentes. Por otro lado, Vue
+                    también es perfectamente capaz de impulsar aplicaciones sofisticadas de una sola página cuando se
+                    usa en combinación con herramientas modernas y bibliotecas de soporte .</p>
+                <div class="vstack gap-3 d-flex justify-content-center">
+                    <p class="m-2">Si es un desarrollador de frontend experimentado y desea saber cómo se compara Vue
+                        con otras bibliotecas / marcos, consulte la Comparación con otros marcos .</p>
+            </article>
+        </section>
+        <section class="main-section" id="empecemos">
+            <h1>Empecemos</h1>
+            <article>
+                <button type="button" class="btn btn-success">Instalacion</button>
+                <div class="bg-light text-dark border m-2">La guía oficial asume un conocimiento de nivel intermedio de
+                    HTML, CSS y JavaScript. Si es totalmente nuevo en el desarrollo de frontend, puede que no sea la
+                    mejor idea saltar directamente a un marco como primer paso: ¡aprenda los conceptos básicos y luego
+                    regrese! La experiencia previa con otros marcos ayuda, pero no es necesaria.</div>
+                <p class="m-2"> La página de instalación proporciona más opciones para instalar Vue. Nota: Nosotros no
+                    recomendamos que los principiantes comienzan con vue-cli, especialmente si usted todavía no está
+                    familiarizado con las herramientas de construcción basadas en Node.js.</p>
+                <p class="m-2">Si prefieres algo más interactivo, también puedes consultar esta serie de tutoriales
+                    sobre Scrimba , que te ofrece una combinación de screencast y juegos de código con los que puedes
+                    pausar y jugar en cualquier momento.</p>
+                <div class="vstack gap-3 d-flex justify-content-center">
+                    <p class="m-2">Si es un desarrollador de frontend experimentado y desea saber cómo se compara Vue
+                        con otras bibliotecas / marcos, consulte la Comparación con otros marcos .</p>
+                    <code class="hljs js">
+
+                        </code>
+            </article>
+        </section>
+        <section class="main-section" id="representacion">
+            <h1>Representación declarativa</h1>
+            <article>
+                <p class="m-2"> En el núcleo de Vue.js hay un sistema que nos permite renderizar datos de forma
+                    declarativa al DOM utilizando una sintaxis de plantilla sencilla:</p>
+                <div class="bg-light text-dark border m-2">
+                    <code class="hljs js">
+                            var app = new Vue({
+                                el: '#app',
+                                data: {
+                                  message: 'Hello Vue!'
+                                }
+                              })
+                        </code>
+                </div>
+                <div class="bg-light text-dark border m-2">
+                    <code class="hljs js">
+                            ¡Hello Vue! 
+                        </code>
+                </div>
+                <p class="m-2">¡Ya hemos creado nuestra primera aplicación Vue! Esto se parece bastante a renderizar una
+                    plantilla de cadena, pero Vue ha hecho mucho trabajo bajo el capó. Los datos y el DOM ahora están
+                    vinculados y ahora todo es reactivo . ¿Como sabemos? Abra la consola JavaScript de su
+                    navegador(ahora mismo, en esta página) y establezca app.messageun valor diferente. Debería ver el
+                    ejemplo renderizado anterior actualizado en consecuencia.</p>
+                <div class="vstack gap-3 d-flex justify-content-center">
+                    <p class="m-2">Tenga en cuenta que ya no tenemos que interactuar con el HTML directamente. Una
+                        aplicación Vue se adjunta a un solo elemento DOM ( #appen nuestro caso) y luego lo controla por
+                        completo. El HTML es nuestro punto de entrada, pero todo lo demás sucede dentro de la instancia
+                        de Vue recién creada.</p>
+            </article>
+        </section>
+        <section class="main-section" id="relacion">
+            <h1>Relación con elementos personalizados</h1>
+            <article>
+                <p class="m-2">Es posible que haya notado que los componentes de Vue son muy similares a los elementos
+                    personalizados , que forman parte de la especificación de componentes web . Esto se debe a que la
+                    sintaxis del componente de Vue se modela libremente según la especificación. Por ejemplo, los
+                    componentes de Vue implementan la API Slot y el isatributo especial. Sin embargo, existen algunas
+                    diferencias clave:</p>
+                <ul>
+                    <li>
+                        La especificación de componentes web se ha finalizado, pero no se implementa de forma nativa en
+                        todos los navegadores. Safari 10.1+, Chrome 54+ y Firefox 63+ admiten componentes web de forma
+                        nativa. En comparación, los componentes de Vue no requieren polyfills y funcionan de manera
+                        consistente en todos los navegadores compatibles (IE9 y superior). Cuando sea necesario, los
+                        componentes de Vue también se pueden envolver dentro de un elemento personalizado nativo.
+                    </li>
+                    <li>
+                        Los componentes de Vue brindan características importantes que no están disponibles en elementos
+                        personalizados simples, en particular el flujo de datos de componentes cruzados, la comunicación
+                        de eventos personalizados e integraciones de herramientas de construcción.
+                    </li>
+                </ul>
+                <div class="vstack gap-3 d-flex justify-content-center">
+                    <p class="m-2">Aunque Vue no usa elementos personalizados internamente, tiene una gran
+                        interoperabilidad cuando se trata de consumir o distribuir como elementos personalizados. Vue
+                        CLI también admite la creación de componentes de Vue que se registran como elementos
+                        personalizados nativos.</p>
+            </article>
+        </section>
+        <section class="main-section" id="instalacion">
+            <h1>Instalación</h1>
+            <article>
+                <h3># Nota de compatibilidad</h3>
+                <p class="m-2">Vue no es compatible con IE8 y versiones anteriores, porque utiliza las funciones de
+                    ECMAScript 5 que no se pueden cambiar en IE8. Sin embargo, es compatible con todos los navegadores
+                    compatibles con ECMAScript 5.</p>
+                <h3># Control de versiones semántico</h3>
+                <p class="m-2">Vue sigue el control de versiones semántico en todos sus proyectos oficiales para obtener
+                    características y comportamientos documentados. Para el comportamiento indocumentado o las partes
+                    internas expuestas, los cambios se describen en las notas de la versión .</p>
+                    <h3># Notas de lanzamiento</h3>
+                <p class="m-2">Última versión estable: 2.6.14 <br>
+                    Las notas de lanzamiento detalladas para cada versión están disponibles en GitHub .</p>
+            </article>
+        </section>
+        <section class="main-section" id="Devtools">
+            <h1>Vue Devtools</h1>
+            <article>
+                <p class="m-2">Al usar Vue, recomendamos instalar también Vue Devtools en su navegador, lo que le permite inspeccionar y depurar sus aplicaciones Vue en una interfaz más fácil de usar.</p>
+            </article>
+        </section>
+        <section class="main-section" id="Devtools">
+            <h1>Script Incluir directamente</h1>
+            <article>
+                <p class="m-2">Simplemente descárguelo e inclúyalo con una etiqueta de secuencia de comandos. Vuese registrará como una variable global.</p>
+                <div class="bg-light text-dark border m-2">No uses la versión minificada durante el desarrollo. ¡Te perderás todas las buenas advertencias de errores comunes!</div>
+               <a href="https://vuejs.org/v2/guide/installation.html#Vue-Devtools">
+                <button type="button" class="btn btn-success">Version de Desarrolladores</button>
+               </a></article>
+        </section>
+        <section class="main-section" id="Sintaxis">
+            <h1>Sintaxis de la plantilla</h1>
+            <article>
+                <p class="m-2">Vue.js utiliza una sintaxis de plantilla basada en HTML que le permite vincular declarativamente el DOM renderizado a los datos de la instancia de Vue subyacente. Todas las plantillas de Vue.js son HTML válidas que pueden ser analizadas por navegadores compatibles con las especificaciones y analizadores de HTML.</p>
+                <div class="m-2">Debajo del capó, Vue compila las plantillas en funciones de renderizado de DOM virtual. Combinado con el sistema de reactividad, Vue es capaz de determinar de forma inteligente la cantidad mínima de componentes para volver a renderizar y aplicar la cantidad mínima de manipulaciones DOM cuando cambia el estado de la aplicación.</div>
+                <div class="m-2">Si está familiarizado con los conceptos de Virtual DOM y prefiere la potencia bruta de JavaScript, también puede escribir directamente funciones de renderizado en lugar de plantillas, con soporte JSX opcional.</div>
+               </article>
+        </section>
+        <section class="main-section" id="estilo">
+            <h1>Vinculaciones de clase y estilo</h1>
+            <article>
+                <p class="m-2">Una necesidad común para el enlace de datos es manipular la lista de clases de un elemento y sus estilos en línea. Dado que ambos son atributos, podemos usarlos v-bindpara manejarlos: solo necesitamos calcular una cadena final con nuestras expresiones. Sin embargo, entrometerse con la concatenación de cadenas es molesto y propenso a errores. Por esta razón, Vue proporciona mejoras especiales cuando v-bindse usa con classy style. Además de las cadenas, las expresiones también pueden evaluar objetos o matrices.</p>
+               </article>
+        </section>
+        
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

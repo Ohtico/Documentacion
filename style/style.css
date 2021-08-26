@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+
+html, body {
+    min-width: 290px;
+    color: #ffffff;
+    font-family: 'Lobster', cursive;
+    line-height: 1.5;
+    background:rgba(59, 73, 100, 0.897)
+}
+nav{
+    display: block;
+}
+#costabar {
+    position: fixed;
+    min-width: 290px;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    height: 100%;
+    border-right: solid;
+    border-color: rgba(0, 22, 22, 0.4);
+}
+#costabar ul {
+    height: 88%;
+    padding: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+#costabar li {
+    color: #ffffff;
+    border-top: 1px solid;
+    list-style: none;
+    position: relative;
+    width: 100%;
+}
+#costabar a {
+    display: block;
+    padding: 10px 30px;
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+main {
+    display: block;
+}
+#main-cont {
+    position: absolute;
+    margin-left: 310px;
+    padding: 20px;
+    margin-bottom: 110px;
+}
+section {
+    display: block;
+}
+#main-cont header {
+    text-align: left;
+    margin: 0px;
+}
+section article {
+    color: #ffffff;
+    margin: 15px;
+    font-size: 0.96em;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
